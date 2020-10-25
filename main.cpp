@@ -6,7 +6,6 @@
 //  Copyright © 2020 TzuChieh. All rights reserved.
 //
 
-#include "normal.hpp"
 #include "function.hpp"
 int main(int argc, char const *argv[])
 {
@@ -41,7 +40,7 @@ int main(int argc, char const *argv[])
         double distance;
         double finaldistance = 1000000;
         double pher[len][len];                //紀錄費洛蒙表
-        double phertemp[len][len];            //新增螞蟻的費洛蒙表等到該輪所有螞蟻走完後與上表進行衰退＆疊加
+        // double phertemp[len][len];            //新增螞蟻的費洛蒙表等到該輪所有螞蟻走完後與上表進行衰退＆疊加
         phermoneinitial((double *)pher, len); //初始費洛蒙濃度
         //phermoneinitial((double *)phertemp, len); //初始費洛蒙濃度
         int path[len + 1];                    //儲存當前螞蟻的路徑
@@ -64,7 +63,7 @@ int main(int argc, char const *argv[])
                     memcpy(iter_bestpath, path, sizeof(path));
                    // if (iter_bestdistance < 468)
                     //{
-                    twoopt(iter_bestpath,len,iter_bestdistance,(double*)distancetable);
+                    // twoopt(iter_bestpath,len,iter_bestdistance,(double*)distancetable);
                     //}
                 }
                 //cout<<"ant "<<i+1<<" distance :"<<distance<<endl;//生成單一距離以及路徑
